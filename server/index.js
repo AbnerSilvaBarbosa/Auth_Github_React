@@ -15,7 +15,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 
-app.get("/", (req, res) => {
+app.get("/health", (req, res) => {
     res.send("Hello World")
 })
 
