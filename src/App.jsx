@@ -22,6 +22,8 @@ function App() {
 
   async function getAccessToken(codeParam) {
 
+    
+
     await fetch(`${URL_API}/getAccessToken?code=` + codeParam, {
       method: "GET",
 
@@ -42,6 +44,7 @@ function App() {
   }
 
   async function getUserData() {
+
     await fetch(`${URL_API}/getUserData`, {
       method: "GET",
       headers: {
@@ -64,6 +67,7 @@ function App() {
 
   useEffect(() => {
 
+    
 
     if (localStorage.getItem("accessToken") != null) {
       setIsLogin(true)
