@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 
 
 const CLIENT_ID = import.meta.env.VITE_CLIENT_ID
+const URL_API = import.meta.env.VITE_API_URL
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
 
   async function getAccessToken(codeParam) {
 
-    await fetch("http://localhost:3000/getAccessToken?code=" + codeParam, {
+    await fetch(`${URL_API}/getAccessToken?code=` + codeParam, {
       method: "GET",
 
     }).then((response) => {
@@ -41,7 +42,7 @@ function App() {
   }
 
   async function getUserData() {
-    await fetch("http://localhost:3000/getUserData", {
+    await fetch(`${URL_API}/getUserData`, {
       method: "GET",
       headers: {
         "Authorization": "Bearer " + localStorage.getItem("accessToken")
