@@ -116,6 +116,7 @@ function App() {
           <div>
             <div>
               <h3>User is not logged in </h3>
+              <h3>Usuário não está logado </h3>
               <button onClick={loginWithGithub}>Login Github</button>
             </div>
           </div>
